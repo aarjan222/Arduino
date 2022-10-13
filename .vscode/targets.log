@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 24 23:02:24 2022
+# Make data base, printed on Thu Aug 25 13:03:23 2022
 
 # Variables
 
@@ -245,7 +245,7 @@ LC_ADDRESS = bho_NP
 # environment
 LANG = C
 # environment
-VSCODE_PID = 5667
+VSCODE_PID = 16086
 # environment
 KDE_SESSION_UID = 1000
 # variable set hash-table stats:
@@ -257,9 +257,9 @@ KDE_SESSION_UID = 1000
 
 # Directories
 
-# . (device 2050, inode 2491276): 13 files, no impossibilities.
+# . (device 2050, inode 2491276): 14 files, no impossibilities.
 
-# 13 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -310,12 +310,12 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 238 B / avg = 11 B
-# current buf: size = 8162 B / used = 238 B / count = 21 / avg = 11 B
+# strcache buffers: 1 (0) / strings = 22 / storage = 243 B / avg = 11 B
+# current buf: size = 8162 B / used = 243 B / count = 22 / avg = 11 B
 
-# strcache performance: lookups = 24 / hit rate = 12%
+# strcache performance: lookups = 25 / hit rate = 12%
 # hash-table stats:
-# Load=21/8192=0%, Rehash=0, Collisions=1/24=4%
-# Finished Make data base on Wed Aug 24 23:02:24 2022
+# Load=22/8192=0%, Rehash=0, Collisions=1/25=4%
+# Finished Make data base on Thu Aug 25 13:03:23 2022
 
  
