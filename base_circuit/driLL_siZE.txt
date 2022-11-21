@@ -1,0 +1,18 @@
+stm_pins = 0.8
+spdt switch = 0.8
+
+4pin_jst = 0.8
+usb_conn = 0.8
+res, led, cap = 0.8
+gnd_via_wire = 0.8
+
+5pin_jst = 0.9
+
+bt_2x04_Conn *2 = 1
+usb_conn_mounting_hole = 1
+
+Mounting Holes = 3
+
+
+
+NOTE:: all sizes are in mm
