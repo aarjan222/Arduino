@@ -75,9 +75,17 @@ bool Adafruit_MPU6050::begin(uint8_t i2c_address, TwoWire *wire,
 
   i2c_dev = new Adafruit_I2CDevice(i2c_address, wire);
 
-  if (!i2c_dev->begin()) {
-    return false;
+  // For boards with I2C bus power control, may need to delay to allow
+  // MPU6050 to come up after initial power.
+  bool mpu_found = false;
+  for (uint8_t tries = 0; tries < 5; tries++) {
+    mpu_found = i2c_dev->begin();
+    if (mpu_found)
+      break;
+    delay(10);
   }
+  if (!mpu_found)
+    return false;
 
   Adafruit_BusIO_Register chip_id =
       Adafruit_BusIO_Register(i2c_dev, MPU6050_WHO_AM_I, 1);
@@ -393,7 +401,7 @@ void Adafruit_MPU6050::setInterruptPinLatch(bool held) {
   Adafruit_BusIO_Register int_pin_config =
       Adafruit_BusIO_Register(i2c_dev, MPU6050_INT_PIN_CONFIG, 1);
   Adafruit_BusIO_RegisterBits int_latch =
-      Adafruit_BusIO_RegisterBits(&int_pin_config, 1, 7);
+      Adafruit_BusIO_RegisterBits(&int_pin_config, 1, 5);
   int_latch.write(held);
 }
 
@@ -619,7 +627,7 @@ bool Adafruit_MPU6050::setTemperatureStandby(bool enable) {
 
   Adafruit_BusIO_RegisterBits temp_stdby =
       Adafruit_BusIO_RegisterBits(&pwr_mgmt, 1, 3);
-  return temp_stdby.write(1);
+  return temp_stdby.write(enable);
 }
 
 /******************* Adafruit_Sensor functions *****************/
