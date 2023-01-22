@@ -1,0 +1,22 @@
+A4988
+16 pin headers
+power supply = 3 to 5.5v
+1A, 1B, 2A, 2B  are connected with a bipolar stepper motor 4 wires are internally connected with two colis. 
+1A and 1B to one coil of the stepper motor 
+1A and 1B to other coil of the stepper motor
+
+VMOT and GND to power from 8 to 35 volts
+if not using CNC shield then use decoupling capacitor of at least 47uF
+from protecting the drivers from voltage spikes
+
+STEP and DIRECTION pin for controlling the motor movements
+
+dir = for rotation direction of the motor
+to the digital pins on our microcontroller
+
+step pin for controlling the microsteps of the motor and each pulse sent to this pin motor moves one step 
+
+sleep pin = to minimize the power consumption
+low on this pin puts driver in sleep mode
+
+reset = set the translator to a predefined home state
