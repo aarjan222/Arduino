@@ -1,8 +1,7 @@
 #include <SoftwareSerial.h>
 
 
-//#include <SoftwareSerial.h>   //header file of software serial port
-//SoftwareSerial Serial3(2, 3); //define software serial port name as Serial1 and define pin2 as RX & pin3 as TX
+// SoftwareSerial Serial3(2, 3); //define software serial port name as Serial1 and define pin2 as RX & pin3 as TX
  
 int dist;                     //actual distance measurements of LiDAR
 int strength;                 //signal strength of LiDAR

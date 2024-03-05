@@ -33,7 +33,6 @@ void loop() {
     rc_pulse1=1000;
   }
   if (rc_pulse1 > 1500) {
-
     speed = map(rc_pulse1, 1500, 2000, 0, 255);
     Serial.print("forward\t");
     set_forward_direction();
